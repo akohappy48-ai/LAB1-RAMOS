@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karl Ramos | Portfolio</title>
+    <title>KD Ramos — Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Sticky Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-logo">KR.</div>
+        <div class="nav-brand">
+            <span class="logo">KR</span>
+            <span class="status-badge"><span class="dot"></span> Open to Projects</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#interests">Interests</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -21,22 +25,42 @@
     </nav>
 
     <main class="container">
-        <!-- Hero / About Section -->
+        <!-- Hero Section -->
         <section id="about" class="hero-section">
-            <h1 class="name">KD Ramos</h1>
-            <p class="role">IT & Developer</p>
+            <div class="profile-avatar">KR</div>
+            <h1 class="name">Karl Ramos</h1>
+            <p class="role">Information Technology Student & Developer</p>
             <p class="bio-text">
-                Passionate about building clean web experiences, solving logical problems, and continuously learning modern software development practices.
+                Crafting clean web experiences, solving complex algorithmic problems, and exploring modern software engineering principles.
             </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
         </section>
 
-        <!-- Aesthetic Quote Section -->
-        <section class="quote-section">
-            <blockquote id="quoteText">
-                “To burn with desire and keep quiet about it is the greatest punishment we can bring on ourselves.”
-            </blockquote>
-            <cite id="quoteAuthor">— Federico García Lorca</cite>
-            <button id="factBtn" class="minimal-btn">next quote →</button>
+        <!-- Quote Card -->
+        <section class="quote-card">
+            <div class="quote-content">
+                <blockquote id="quoteText">
+                    “To burn with desire and keep quiet about it is the greatest punishment we can bring on ourselves.”
+                </blockquote>
+                <cite id="quoteAuthor">— Federico García Lorca</cite>
+            </div>
+            <button id="factBtn" class="minimal-btn">Next Quote →</button>
+        </section>
+
+        <!-- Tech Stack / Skills Section -->
+        <section id="skills" class="section">
+            <span class="section-title">SKILLS & TECHNOLOGIES</span>
+            <div class="skills-grid">
+                <div class="skill-badge"><span>☕</span> Java</div>
+                <div class="skill-badge"><span>🎨</span> HTML5 / CSS3</div>
+                <div class="skill-badge"><span>⚡</span> JavaScript</div>
+                <div class="skill-badge"><span>🐧</span> Linux & Bash</div>
+                <div class="skill-badge"><span>📦</span> Git / GitHub</div>
+                <div class="skill-badge"><span>⚙️</span> Vim / Terminal</div>
+            </div>
         </section>
 
         <!-- Projects Showcase Section -->
@@ -44,14 +68,34 @@
             <span class="section-title">FEATURED PROJECTS</span>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Lab 1: About Me Portfolio</h3>
-                    <p>An interactive, minimalist portfolio built with vanilla HTML, CSS, and JavaScript featuring custom themes and Git integration.</p>
-                    <span class="tech-tag">HTML / CSS / JS</span>
+                    <div class="project-header">
+                        <h3>Lab 1: Personal Portfolio Website</h3>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <p>An interactive, minimalist personal portfolio featuring clean UI, responsive layout, theme switching, and Git workflow.</p>
+                    <div class="project-footer">
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Repo ↗</a>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Java Logic Exercises</h3>
-                    <p>A collection of algorithmic problem solutions focusing on control structures, conditional logic, and modular functions.</p>
-                    <span class="tech-tag">Java</span>
+                    <div class="project-header">
+                        <h3>Java Algorithm & Logic Suite</h3>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <p>Academic repository of problem-solving implementations covering nested conditional structures, arrays, and optimized routines.</p>
+                    <div class="project-footer">
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                        <a href="#" class="project-link">View Code ↗</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -60,30 +104,33 @@
         <section id="interests" class="section">
             <span class="section-title">INTERESTS & HOBBIES</span>
             <div class="hobby-list">
-                <button class="hobby-item" onclick="showHobby('Basketball', 'Hitting the court for pickup games, shooting practice, and teamwork.')">Basketball</button>
-                <button class="hobby-item" onclick="showHobby('Chess', 'Tactical opening studies, positional strategy, and fast-paced blitz games.')">Chess</button>
-                <button class="hobby-item" onclick="showHobby('Pickleball', 'Rallying on the court with friends and enjoying competitive games.')">Pickleball</button>
-                <button class="hobby-item" onclick="showHobby('Reading', 'Exploring non-fiction, psychology, self-improvement, and strategy books.')">Reading</button>
+                <button class="hobby-item active" onclick="showHobby('Basketball', 'Hitting the court for pickup games, shooting drills, and tactical gameplay.', this)">Basketball</button>
+                <button class="hobby-item" onclick="showHobby('Chess', 'Studying tactical openings, positional endgame strategy, and fast blitz games.', this)">Chess</button>
+                <button class="hobby-item" onclick="showHobby('Pickleball', 'Rallying with friends and mastering court control.', this)">Pickleball</button>
+                <button class="hobby-item" onclick="showHobby('Reading', 'Diving into non-fiction, psychology, self-improvement, and strategy literature.', this)">Reading</button>
             </div>
 
-            <div id="hobbyDetail" class="hobby-detail">
-                <span>Select an interest to read more details.</span>
+            <div id="hobbyDetail" class="hobby-detail-card">
+                <strong id="hobbyTitle">Basketball:</strong>
+                <span id="hobbyDesc">Hitting the court for pickup games, shooting drills, and tactical gameplay.</span>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="section contact-section">
-            <span class="section-title">GET IN TOUCH</span>
-            <p>Interested in collaborating or talking tech? Let's connect!</p>
-            <div class="contact-links">
-                <a href="https://github.com/akohappy48-ai" target="_blank" class="contact-btn">GitHub</a>
-                <a href="mailto:example@domain.com" class="contact-btn">Email Me</a>
+            <div class="contact-card">
+                <h2>Let's build something together.</h2>
+                <p>Feel free to reach out for collaborations or just to chat about code and technology.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:karl.ramos@domain.com" class="btn btn-primary">Send Email</a>
+                    <a href="https://github.com/akohappy48-ai" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Karl Ramos. Built with simplicity and intent.</p>
+        <p>© 2026 Karl Ramos. Designed with minimalist aesthetics.</p>
     </footer>
 
     <script src="script.js"></script>

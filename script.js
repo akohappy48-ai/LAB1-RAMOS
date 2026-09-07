@@ -37,9 +37,13 @@ factBtn.addEventListener("click", () => {
     }, 200);
 });
 
-function showHobby(title, detail) {
-    const hobbyDetail = document.getElementById("hobbyDetail");
-    hobbyDetail.innerHTML = `<strong style="color: var(--text-primary);">${title}:</strong>&nbsp;${detail}`;
+function showHobby(title, detail, btnElement) {
+    document.getElementById("hobbyTitle").textContent = title + ":";
+    document.getElementById("hobbyDesc").textContent = detail;
+
+    const items = document.querySelectorAll('.hobby-item');
+    items.forEach(item => item.classList.remove('active'));
+    btnElement.classList.add('active');
 }
 
 // Dark / Light Theme Toggle
