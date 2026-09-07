@@ -42,18 +42,17 @@ function showHobby(title, detail) {
     hobbyDetail.innerHTML = `<strong style="color: var(--text-primary);">${title}:</strong>&nbsp;${detail}`;
 }
 
-// Dark/Light Toggle
+// Dark / Light Theme Toggle
 const themeBtn = document.getElementById("themeBtn");
-const themeIcon = document.getElementById("themeIcon");
 let isDark = false;
 
 themeBtn.addEventListener("click", () => {
     isDark = !isDark;
     if (isDark) {
         document.body.setAttribute("data-theme", "dark");
-        themeIcon.textContent = "☀️";
+        themeBtn.textContent = "☀️";
     } else {
         document.body.removeAttribute("data-theme");
-        themeIcon.textContent = "🌙";
+        themeBtn.textContent = "🌙";
     }
 });

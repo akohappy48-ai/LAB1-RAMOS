@@ -3,48 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karl Ramos</title>
+    <title>Karl Ramos | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Minimal Theme Toggle -->
-    <button id="themeBtn" class="theme-btn" aria-label="Toggle Theme">
-        <span id="themeIcon">🌙</span>
-    </button>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">KR.</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeBtn" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+    </nav>
 
     <main class="container">
-        <!-- Header Profile -->
-        <header class="profile-header">
+        <!-- Hero / About Section -->
+        <section id="about" class="hero-section">
             <h1 class="name">Karl Ramos</h1>
-            <p class="role">Computer Science & Life</p>
-        </header>
+            <p class="role">Computer Science Student & Developer</p>
+            <p class="bio-text">
+                Passionate about building clean web experiences, solving logical problems, and continuously learning modern software development practices.
+            </p>
+        </section>
 
-        <!-- Minimal Quote Section -->
+        <!-- Aesthetic Quote Section -->
         <section class="quote-section">
             <blockquote id="quoteText">
                 “To burn with desire and keep quiet about it is the greatest punishment we can bring on ourselves.”
             </blockquote>
             <cite id="quoteAuthor">— Federico García Lorca</cite>
-            
             <button id="factBtn" class="minimal-btn">next quote →</button>
         </section>
 
-        <!-- Hobbies Section -->
-        <section class="hobbies-section">
-            <span class="section-title">INTERESTS</span>
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="section">
+            <span class="section-title">FEATURED PROJECTS</span>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Lab 1: About Me Portfolio</h3>
+                    <p>An interactive, minimalist portfolio built with vanilla HTML, CSS, and JavaScript featuring custom themes and Git integration.</p>
+                    <span class="tech-tag">HTML / CSS / JS</span>
+                </div>
+                <div class="project-card">
+                    <h3>Java Logic Exercises</h3>
+                    <p>A collection of algorithmic problem solutions focusing on control structures, conditional logic, and modular functions.</p>
+                    <span class="tech-tag">Java</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies & Interests Section -->
+        <section id="interests" class="section">
+            <span class="section-title">INTERESTS & HOBBIES</span>
             <div class="hobby-list">
-                <button class="hobby-item" onclick="showHobby('Basketball', 'Hitting the court for pickup games and practice.')">Basketball</button>
-                <button class="hobby-item" onclick="showHobby('Chess', 'Tactical opening studies and fast-paced blitz games.')">Chess</button>
-                <button class="hobby-item" onclick="showHobby('Pickleball', 'Rallying on the court with friends.')">Pickleball</button>
-                <button class="hobby-item" onclick="showHobby('Reading', 'Exploring non-fiction, self-improvement, and psychology.')">Reading</button>
+                <button class="hobby-item" onclick="showHobby('Basketball', 'Hitting the court for pickup games, shooting practice, and teamwork.')">Basketball</button>
+                <button class="hobby-item" onclick="showHobby('Chess', 'Tactical opening studies, positional strategy, and fast-paced blitz games.')">Chess</button>
+                <button class="hobby-item" onclick="showHobby('Pickleball', 'Rallying on the court with friends and enjoying competitive games.')">Pickleball</button>
+                <button class="hobby-item" onclick="showHobby('Reading', 'Exploring non-fiction, psychology, self-improvement, and strategy books.')">Reading</button>
             </div>
 
             <div id="hobbyDetail" class="hobby-detail">
-                <span>Select an interest to read more.</span>
+                <span>Select an interest to read more details.</span>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <span class="section-title">GET IN TOUCH</span>
+            <p>Interested in collaborating or talking tech? Let's connect!</p>
+            <div class="contact-links">
+                <a href="https://github.com/akohappy48-ai" target="_blank" class="contact-btn">GitHub</a>
+                <a href="mailto:example@domain.com" class="contact-btn">Email Me</a>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>© 2026 Karl Ramos. Built with simplicity and intent.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
