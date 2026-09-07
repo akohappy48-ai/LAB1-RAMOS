@@ -2,13 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl Ramos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, I'm Karl!</h1>
-    <p>Welcome to my webpage for Lab 1.</p>
-    <button id="btn">Click Me</button>
+
+    <!-- Minimal Theme Toggle -->
+    <button id="themeBtn" class="theme-btn" aria-label="Toggle Theme">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <main class="container">
+        <!-- Header Profile -->
+        <header class="profile-header">
+            <h1 class="name">Karl Ramos</h1>
+            <p class="role">Computer Science & Life</p>
+        </header>
+
+        <!-- Minimal Quote Section -->
+        <section class="quote-section">
+            <blockquote id="quoteText">
+                “To burn with desire and keep quiet about it is the greatest punishment we can bring on ourselves.”
+            </blockquote>
+            <cite id="quoteAuthor">— Federico García Lorca</cite>
+            
+            <button id="factBtn" class="minimal-btn">next quote →</button>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section class="hobbies-section">
+            <span class="section-title">INTERESTS</span>
+            <div class="hobby-list">
+                <button class="hobby-item" onclick="showHobby('Basketball', 'Hitting the court for pickup games and practice.')">Basketball</button>
+                <button class="hobby-item" onclick="showHobby('Chess', 'Tactical opening studies and fast-paced blitz games.')">Chess</button>
+                <button class="hobby-item" onclick="showHobby('Pickleball', 'Rallying on the court with friends.')">Pickleball</button>
+                <button class="hobby-item" onclick="showHobby('Reading', 'Exploring non-fiction, self-improvement, and psychology.')">Reading</button>
+            </div>
+
+            <div id="hobbyDetail" class="hobby-detail">
+                <span>Select an interest to read more.</span>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

@@ -1,11 +1,177 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    text-align: center;
-    padding-top: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap');
+
+:root {
+    --bg: #fafafa;
+    --card-bg: #ffffff;
+    --text-primary: #171717;
+    --text-muted: #737373;
+    --border: #e5e5e5;
+    --accent: #262626;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Newsreader', Georgia, serif;
 }
-button {
-    padding: 10px 20px;
-    font-size: 16px;
+
+[data-theme="dark"] {
+    --bg: #0a0a0a;
+    --card-bg: #121212;
+    --text-primary: #f5f5f5;
+    --text-muted: #a3a3a3;
+    --border: #262626;
+    --accent: #e5e5e5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Minimalist Card Container */
+.container {
+    width: 100%;
+    max-width: 440px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 32px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Header */
+.profile-header {
+    margin-bottom: 32px;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+}
+
+.role {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Aesthetic Quote Section */
+.quote-section {
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    transition: opacity 0.2s ease;
+}
+
+cite {
+    display: block;
+    font-size: 0.8rem;
+    font-style: normal;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s ease;
+}
+
+.minimal-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
     cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.minimal-btn:hover {
+    color: var(--text-primary);
+}
+
+/* Hobbies Section */
+.section-title {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.hobby-item {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hobby-item:hover {
+    border-color: var(--accent);
+    background-color: var(--bg);
+}
+
+.hobby-detail {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Theme Button */
+.theme-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+    border-color: var(--accent);
 }
